@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+//@author Gabe Armstrong & Jon Hoeve
+
 console.log("Welcome to Calculator.js\n");
 
 var total = 0.0;
