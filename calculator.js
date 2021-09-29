@@ -14,10 +14,14 @@ const readline = require('readline').createInterface({
 	output: process.stdout
 });
 
+//Function that asks the user for the operation
+
 function askForOp(){
 	readline.question("Enter operation (+-*/, q to quit): ", input => {op = input;
 	checkValidOp(op);});
 }
+
+//Checks if the user input a valid operator
 
 function checkValidOp(op){
 	if (!validOps.includes(op)) {
@@ -31,6 +35,8 @@ function checkValidOp(op){
 	}
 }
 
+//Checks if the user input a valid number
+
 function enterVal() {
 	readline.question("Enter Value: ", val => {value2 = parseFloat(val);
 	if (isNaN(value2)) {
@@ -43,6 +49,8 @@ function enterVal() {
 }
 
 askForOp();
+
+//Calculates the value based on the given operator and number and prints to the screen
 
 function calc(){
 	if(op == "+"){
